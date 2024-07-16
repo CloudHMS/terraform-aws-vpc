@@ -1198,6 +1198,11 @@ variable "single_nat_gateway" {
   default     = false
 }
 
+variable "default_nat_gateway_az_index" {
+  type    = number
+  default = 0
+}
+
 variable "one_nat_gateway_per_az" {
   description = "Should be true if you want only one NAT Gateway per availability zone. Requires `var.azs` to be set, and the number of `public_subnets` created to be greater than or equal to the number of availability zones specified in `var.azs`"
   type        = bool
